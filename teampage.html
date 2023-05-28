@@ -3,8 +3,16 @@
 
 <head>
     <title>Team Page</title>
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Fira+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
 
 
@@ -15,7 +23,7 @@
         body {
             font-family: Arial, sans-serif;
             background: rgb(2, 0, 36);
-            background: linear-gradient(148deg, rgba(2, 0, 36, 1) 0%, rgba(50, 50, 131, 1) 35%, rgba(23, 30, 88, 1) 100%);
+            background: linear-gradient(120deg, rgba(2, 0, 36, 1) 0%, rgba(143, 44, 173, 1) 100%);
             margin: 0;
         }
 
@@ -25,12 +33,13 @@
             text-align: center;
             background: rgb(2, 0, 36);
             padding: 20px;
-            background-color: #21295f;
+            background-color: rgba(64, 13, 118, 1);
             border-radius: 40px 5px 2px 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 20px 5px 10px 5px;
+            margin: 2.2vw 0.1vw 2.2vw 0.1vw;
             width: max(30%, 300px);
             transition: transform 1s, border-radius 1s, background-color 1s;
+
         }
 
         .team-member img {
@@ -38,23 +47,33 @@
             height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             margin: auto;
         }
 
-        .team-member h3 {
-            margin: 0;
+        .team-member h2 {
+            margin: 0px;
             font-size: 20px;
             color: #ffffff;
+            font-family: 'Lato', sans-serif;
+            padding-top: 10px;
+            padding-bottom: 0px;
+
         }
 
         .team-member p {
             margin: 0;
             color: #a1aeba;
+            font-family: 'Fira Sans', sans-serif;
+            padding: 0;
         }
 
         .team-member a {
             color: rgb(255, 255, 255);
+        }
+
+        #postnew {
+            color:#fff;
         }
 
         .team-member .contact {
@@ -93,12 +112,6 @@
             font-size: 1.2em;
         }
 
-        nav>ul>li:hover {
-            background-color: #dfdfe2;
-            color: #1b1b32;
-            cursor: pointer;
-        }
-
         li>a {
             color: inherit;
             text-decoration: none;
@@ -107,13 +120,14 @@
         .header {
             width: 100%;
             height: 89px;
-            background-color: #1b1b32;
+            /*background-color: #1b1b32;*/
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: fixed;
             top: 0;
             z-index: 1000;
+            background: url("headerbg.png")
         }
 
         #logo {
@@ -123,16 +137,17 @@
         }
 
         .header>p {
-            color: #b6bddd;
+            color: #ffffff;
             font-size: min(10vw, 2em);
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .team-member:hover {
             background-color: #0a0a23;
             border-radius: 2px 5px 40px 5px;
             box-shadow: 0 10px 25px #343d77;
-            transform: scale(1.1)
+            transform: scale(1.1);
         }
 
 
@@ -154,7 +169,8 @@
         <p>Our Team</p>
         <nav>
             <ul>
-                <li><a href="LandingPage.html"><ion-icon name="home-outline"> </ion-icon></a><a href="LandingPage.html"> Home</a></li>
+                <li><a href="LandingPage.html"><ion-icon name="home-outline"> </ion-icon></a><a href="LandingPage.html">
+                        Home</a></li>
                 <li><ion-icon name="call-outline"></ion-icon> Contact Us</li>
             </ul>
         </nav>
@@ -278,8 +294,8 @@
                     html += `
         <div class="team-member">
           <img src="${member.profile_pic}" alt="${member.firstname} ${member.lastname}">
-          <h3>${member.firstname} ${member.lastname}</h3>
-          <p>${member.post}</p>
+          <h2>${member.firstname} ${member.lastname}</h2>
+          <p id="postnew">${member.post}</p>
           <div class="contact">
             <p>Email: ${member.contact_email}</p>
             <p>Phone: ${member.contact_number}</p>
@@ -303,17 +319,15 @@
         const header = document.querySelector('.header');
 
         header.style.backgroundColor = 'transparent';
-        //header.style.opacity = 0;
 
         window.addEventListener('scroll', function () {
 
             const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
             const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
 
-            const opacity = scrollPosition / pageHeight;
+            const opacity = 0.8*scrollPosition / pageHeight+0.2;
 
             header.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
-            //header.style.opacity = opacity.toFixed(2); 
         });
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
