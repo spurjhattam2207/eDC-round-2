@@ -15,6 +15,7 @@ Backend
 # Installation Instructions 
 
 Write about the instructions to install frontend/backend (separately if done both) code and to run it
+Ignore Team Page.html teampage is the final one
 ```
 You can insert code fragments like this
 ```
