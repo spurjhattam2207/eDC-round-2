@@ -15,6 +15,7 @@ Backend
 # Installation Instructions 
 
 Write about the instructions to install frontend/backend (separately if done both) code and to run it
+Ignore Team Page.html teampage is the final one
 ```
 You can insert code fragments like this
 ```
@@ -25,5 +26,4 @@ Write briefly about various features of your project and highlight any that make
 
 # Design Decisions 
 
-* I chose a dark background to match the coolness of eDC and also the one with minimum usage of white colours so that I can use a single font color
-* The GIF didn't look much nice moved on to gradients from https://cssgradient.io/
+Sorry, due to lack of time just see final results
