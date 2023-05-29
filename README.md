@@ -22,8 +22,8 @@ You can insert code fragments like this
 
 # Features
 
-Write briefly about various features of your project and highlight any that make it stand out.
+The pages speak for themselves :)
 
 # Design Decisions 
 
-Sorry, due to lack of time just see final results
+Sorry, due to lack of time, I won't be able to explain every single tweak although you can call me and I'll explain. For now just see the final results
