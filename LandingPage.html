@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+<script src="legendary-cursor-master/dist/main.js"></script>
+
     <style>
         body {
             background: rgb(2, 0, 36);
@@ -506,6 +508,19 @@ left: 48%;
             }, 1000)
           });
         </script>
+        <script>
+            import LegendaryCursor from ".legendary-cursor-master/src/index";
+    
+    window.addEventListener("load", () => {
+        LegendaryCursor.init({
+            lineSize:         0.05,
+            opacityDecrement: 0.25,
+            speedExpFactor:   0.8,
+            lineExpFactor:    0.6,
+            sparklesCount:    30,
+            maxOpacity:       0.4,
+    });
+    })</script>
         
 </body>
 
