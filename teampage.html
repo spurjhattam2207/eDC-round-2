@@ -154,6 +154,41 @@
         main {
             padding-top: 80px;
         }
+
+        .dropbtn {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown-content a:hover {background-color: #ddd;}
+          
+          .dropdown:hover .dropdown-content {display: block;}
+          
+          .dropdown:hover .dropbtn {background-color: rgba(206, 107, 189, 0.3);}
     </style>
 
 
@@ -171,7 +206,13 @@
             <ul>
                 <li><a href="LandingPage.html"><ion-icon name="home-outline"> </ion-icon></a><a href="LandingPage.html">
                         Home</a></li>
-                <li><ion-icon name="call-outline"></ion-icon> Contact Us</li>
+                <li><div class="dropdown">
+                    <button class="dropbtn"><ion-icon name="call-outline"></ion-icon> Contact Us</button>
+                    <div class="dropdown-content">
+                        <a href="tel:123456789"><ion-icon name="call-outline"></ion-icon> Phone</a>
+                        <a href="mailto:blablabla@bleh.com"><ion-icon name="mail-outline"></ion-icon> Mail</a>
+                    </div>
+                  </div></li>
             </ul>
         </nav>
     </div>
