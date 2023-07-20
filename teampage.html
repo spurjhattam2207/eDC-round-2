@@ -477,14 +477,26 @@
             <p>Email: ${member.contact_email}</p>
             <p>Phone: ${member.contact_number}</p>
             <br>
-            <p><a href="${member.linkedin}" target="_blank" style="text-decoration:none"><ion-icon name="logo-linkedin"></ion-icon>
-            </a> &nbsp &nbsp
-            <a href="${member.twitter}" target="_blank" style="text-decoration:none"><ion-icon name="logo-twitter"></ion-icon></a>
-            &nbsp &nbsp 
-                <a href="${member.instagram}" target="_blank" style="text-decoration:none"><ion-icon name="logo-instagram"></ion-icon></a></p>
-            </div>
-          </div>
+            
+                
+            
         `;
+        if(member.linkedin){
+            html+=`
+            <p><a href="${member.linkedin}" target="_blank" style="text-decoration:none"><ion-icon name="logo-linkedin"></ion-icon>
+            </a> &nbsp &nbsp`
+        }
+        if(member.twitter){
+            html+=`
+            <a href="${member.twitter}" target="_blank" style="text-decoration:none"><ion-icon name="logo-twitter"></ion-icon></a>
+            &nbsp &nbsp `
+        }
+        if(member.instagram){
+            html+=`
+            <a href="${member.instagram}" target="_blank" style="text-decoration:none"><ion-icon name="logo-instagram"></ion-icon></a></p>`
+        }
+        html+=`</div>
+    </div>`
                 });
 
                 const teamPageElement = document.querySelector('#team-page');
@@ -503,7 +515,7 @@
             const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
 
 
-            const opacity = 6 * scrollPosition / pageHeight;
+            const opacity = 10 * scrollPosition / pageHeight;
 
             header.style.background = `rgba(0, 0, 0, ${opacity})`;
         });
